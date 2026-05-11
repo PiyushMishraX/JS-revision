@@ -28,3 +28,56 @@
 // sum()
 
 
+
+
+
+//  this 
+
+
+// console.log(this); // window
+
+
+// var name = "p1"
+
+// window.name = ""
+
+let student = {
+    id: 1,
+    name: "piyush",
+    isPass: true,
+
+    sum: function () {
+        console.log(this); // object
+        
+        console.log("hello");
+        console.log(this.name);
+
+
+        let s1 = ()=>{
+            console.log(this.name);    // object         
+        }
+        s1()
+    },
+
+    arrow: ()=>{
+        console.log(this); // window
+        
+        // console.log(this.name); // name not in the window
+
+        console.log(this.name);
+        
+        
+    }
+
+}
+
+// for (let a in student) {
+//     console.log(student[a]);   
+// }
+
+student.sum();
+student.arrow()
+
+
+
+
