@@ -82,6 +82,7 @@
 
 
 
+
 // function outer() {
 //     console.log("hello");
 
@@ -92,17 +93,22 @@
 
 // outer()
 
-// function outer() {
-//     let userName = "hello"
 
-//     function inner() {
-//         console.log(userName);
-//     }
+// Closure - // inner get its own sperate copy of userName
+//  closure in JavaScript is a function that "remembers" the environment in which it was created. 
+function outer() {
+    let userName = "hello"
 
-//     // inner()
-//     return inner
+    function inner() {
+        console.log(userName);
+    }
+
+    // inner()
+    return inner
     
-// }
+}
 
-// let fn = outer()
-// fn()
+let fn = outer()
+fn()
+console.log(fn);
+
