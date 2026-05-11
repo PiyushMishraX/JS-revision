@@ -96,19 +96,19 @@
 
 // Closure - // inner get its own sperate copy of userName
 //  closure in JavaScript is a function that "remembers" the environment in which it was created. 
-function outer() {
-    let userName = "hello"
+// function outer() {
+//     let userName = "hello"
 
-    function inner() {
-        console.log(userName);
-    }
+//     function inner() {
+//         console.log(userName);
+//     }
 
-    // inner()
-    return inner
+//     // inner()
+//     return inner
     
-}
+// }
 
-let fn = outer()
-fn()
-console.log(fn);
+// let fn = outer()
+// fn()
+// console.log(fn);
 
