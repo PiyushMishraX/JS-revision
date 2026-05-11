@@ -41,43 +41,68 @@
 
 // window.name = ""
 
-let student = {
-    id: 1,
-    name: "piyush",
-    isPass: true,
+// let student = {
+//     id: 1,
+//     name: "piyush",
+//     isPass: true,
 
-    sum: function () {
-        console.log(this); // object
+//     sum: function () {
+//         console.log(this); // object
         
-        console.log("hello");
-        console.log(this.name);
+//         console.log("hello");
+//         console.log(this.name);
 
 
-        let s1 = ()=>{
-            console.log(this.name);    // object         
-        }
-        s1()
-    },
+//         let s1 = ()=>{
+//             console.log(this.name);    // object         
+//         }
+//         s1()
+//     },
 
-    arrow: ()=>{
-        console.log(this); // window
+//     arrow: ()=>{
+//         console.log(this); // window
         
-        // console.log(this.name); // name not in the window
+//         // console.log(this.name); // name not in the window
 
-        console.log(this.name);
+//         console.log(this.name);
         
         
-    }
+//     }
 
-}
-
-// for (let a in student) {
-//     console.log(student[a]);   
 // }
 
-student.sum();
-student.arrow()
+// // for (let a in student) {
+// //     console.log(student[a]);   
+// // }
+
+// student.sum();
+// student.arrow()
 
 
 
 
+
+// function outer() {
+//     console.log("hello");
+
+//     return 5
+//     // do not run
+//     console.log("hii");
+// }
+
+// outer()
+
+// function outer() {
+//     let userName = "hello"
+
+//     function inner() {
+//         console.log(userName);
+//     }
+
+//     // inner()
+//     return inner
+    
+// }
+
+// let fn = outer()
+// fn()
