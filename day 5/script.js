@@ -22,9 +22,26 @@
 let inp = document.querySelector("input")
 let h1 = document.querySelector("h1")
 
+let data = "";
 
 inp.addEventListener("input", (e)=>{
     // console.log(e.target.value);
-    h1.innerText = e.target.value
-    
+    data = e.target.value
 })
+
+// let btn = document.addEventListener("click", ()=>{
+//     h1.innerText = data;
+//     // inp.target.value = ""
+//     inp.value = ""
+//     data = ""
+// })
+
+let btn = document.querySelector("button")
+btn.addEventListener("click", ()=>{
+    h1.innerText = data;
+    // inp.target.value = ""
+    inp.value = ""
+    data = ""
+})
+
+
