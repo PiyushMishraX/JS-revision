@@ -91,9 +91,28 @@ function NoPromise() {
 // fetch()
 
 
+// api full form --> Application Programming Interface
+
+// goto -->> https://jsonplaceholder.typicode.com/
 // fetch('https://jsonplaceholder.typicode.com/todos/1').
 // then(response => response.json())
 // .then(json => console.log(json))
+
+// fetch("https://jsonplaceholder.typicode.com/todos").
+// then((data) => {
+//     return data.json()
+// })
+// .then((val)=>{
+//     console.log(val);
+// }).catch((err)=>{
+//     console.log(err);  
+// })
+
+
+
+//  print
+
+let h2 = document.querySelector("h2")
 
 fetch("https://jsonplaceholder.typicode.com/todos").
 then((data) => {
@@ -101,7 +120,20 @@ then((data) => {
 })
 .then((val)=>{
     console.log(val);
+    // h2.innerText = val[9].title
+
+    for (const i in val) {
+        const newH2 = document.createElement('h2')
+
+        newH2.innerText = val[i].title
+
+        document.body.appendChild(newH2)
+        
+        
+    }
 }).catch((err)=>{
-    console.log(err);
-    
+    console.log(err);  
 })
+
+
+
