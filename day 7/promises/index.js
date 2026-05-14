@@ -56,6 +56,11 @@ function step2() {
     })
 }
 
+function NoPromise() {
+        setTimeout(() => {
+            console.log("no promise");
+        }, 1000);
+}
 
 // step1().then(()=>{
 //     step2()
@@ -67,13 +72,36 @@ function step2() {
 //  .then and .catch is also very lengthy so we use async and await 
 
 // async await syntax is better and easier to implement
-async function call() {
-    await step1()
-    await step2()
-    
-}
+// async function call() {
+//     await step1()
+//     await step2()
+//     // NoPromise()
+//     // await NoPromise()
+// }
 
-call()
+// call()
 
 
 // PROMISES are in API calling and used through .then and .catch or Async Await
+
+
+
+//  fetch -> fetch premade promise apis
+
+// fetch()
+
+
+// fetch('https://jsonplaceholder.typicode.com/todos/1').
+// then(response => response.json())
+// .then(json => console.log(json))
+
+fetch("https://jsonplaceholder.typicode.com/todos").
+then((data) => {
+    return data.json()
+})
+.then((val)=>{
+    console.log(val);
+}).catch((err)=>{
+    console.log(err);
+    
+})
