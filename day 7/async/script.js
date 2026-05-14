@@ -22,3 +22,8 @@ console.log("A");
 
 // Web APIs 
 // log , settimeout, interval , fetch etc are provided by browser web apis which gives time loading fcntions nality 
+
+
+
+// console.log  isn't real print method it is just for debugging mostly , given by browser , 
+// js doesn't have its own printing method for console, terminal
