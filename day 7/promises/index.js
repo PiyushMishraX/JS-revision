@@ -42,15 +42,38 @@ function step1() {
     })
 }
 
+// function step2() {
+//     setTimeout(() => {
+//         console.log("Fillterr");
+//     }, 5000);
+// }
+
 function step2() {
-    setTimeout(() => {
-        console.log("Fillterr");
-    }, 5000);
+    return new Promise((res,rej)=>{
+        setTimeout(() => {
+            console.log("Fillterr");
+        }, 5000);
+    })
 }
 
 
-step1().then(()=>{
-    step2()
-}).catch(()=>{
+// step1().then(()=>{
+//     step2()
+// }).catch(()=>{
 
-})
+// })
+
+
+//  .then and .catch is also very lengthy so we use async and await 
+
+// async await syntax is better and easier to implement
+async function call() {
+    await step1()
+    await step2()
+    
+}
+
+call()
+
+
+// PROMISES are in API calling and used through .then and .catch or Async Await
