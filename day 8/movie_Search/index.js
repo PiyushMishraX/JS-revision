@@ -31,13 +31,16 @@ function show(val) {
     console.log(val);
     
     list.innerHTML = ""
+    
+  for (const i in val) {
+
 
     let img = document.createElement("img");
-    img.setAttribute("src", val[0].show.image.original);
+    img.setAttribute("src", val[i].show.image.original);
 
     list.appendChild(img);
 
-    console.log(val[0].show.image.original);
+    console.log(val[i].show.image.original);
 
-
+  }
 }
