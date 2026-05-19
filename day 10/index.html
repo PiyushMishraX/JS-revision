@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #full {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #quiz {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            height: 500px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 25px;
+        }
+
+        h2.title {
+            color: #1e3a8a;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        #score {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            width: 100%;
+            border-radius: 30px;
+            padding: 8px 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #scoreCard {
+            padding-left: 20px;
+        }
+
+        #timer {
+            padding-right: 20px;
+            color: rgb(244, 47, 47);
+        }
+
+        .question-container {
+            text-align: center;
+            width: 100%;
+        }
+
+        .questionCount {
+            font-size: 12px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .question-text {
+            color: #1e293b;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .options {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .option-button {
+            width: 100%;
+            padding: 10px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            background-color: #ffffff;
+            color: #334155;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: left;
+            transition: all 0.2s ease;
+        }
+
+        .option-button:hover {
+            cursor: pointer;
+        }
+
+        .option-button.selected {
+            background-color: #d1fae5;
+            border-color: #10b981;
+            color: #065f46;
+            font-weight: 600;
+        }
+
+        .nextButton {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2563eb;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s ease;
+        }
+
+        .nextButton:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="full">
+        <div id="quiz">
+
+            <h2 class="title">Quiz Time</h2>
+            <div id="score">
+                <div id="scoreCard">Score: <span id="scoreChange">0</span></div>
+                <div id="timer"><span id="timeChange">0</span> s</div>
+            </div>
+
+            <div class="question-container">
+                <span class="questionCount">Question [<span id="questionNumber">1</span>]</span>
+                <h3 class="question-text" id="headingQuestion">HTML Ka Full Form kya Hai?</h3>
+            </div>
+
+            <div class="options">
+                <button class="option-button">
+                    <div id="op-0">Option 0</div>
+                </button>
+                <button class="option-button">
+                    <div id="op-1">Option 1</div>
+                </button>
+                <button class="option-button">
+                    <div id="op-2">Option 2</div>
+                </button>
+                <button class="option-button">
+                    <div id="op-3">Option 3</div>
+                </button>
+            </div>
+
+            <button class="nextButton">Next Question</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
