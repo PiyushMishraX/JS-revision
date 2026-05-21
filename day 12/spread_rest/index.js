@@ -20,15 +20,44 @@
 // sum(24,3,43,43,43,35,6,3)
 
 
-function sum(a,b,c, ...nums) {
-    let sum=0;
-    console.log(arguments);
+//rest packs data in form of an array
 
-    // return a+b+c;    
-    // return sum;    
-}
+// function sum(a,b,c, ...nums) {
+//     let sum=0;
+//     console.log(arguments);
+
+//     console.log(nums);
+    
+//     return a+b+c;    
+//     // return sum;    
+// }
 
 // sum(24,3,43,43,43,35,6,3)
 
 // console.log(sum(24,3,43,43,43,35,6,3));
-// console.log(sum(24,3,43,43,43,35,6,3));
+// // console.log(sum(24,3,43,43,43,35,6,3));
+
+
+// function sum(a,b,c, ...nums) {
+//     let sum=0;
+//     console.log(arguments);
+
+//     console.log(nums);
+    
+//     return a+b+c;   
+// }
+
+
+
+//  ------------- DESTRUCTURING -----------
+
+let arr = [1,2,3,4,5,6]
+let [a, b, c] = arr // value according to positions
+console.log(a);
+a =23;
+console.log(a); // a is seperate from arr[index]
+console.log(arr[0]);
+
+
+
+
