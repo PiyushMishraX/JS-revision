@@ -41,18 +41,22 @@
 //     }
 // }
 
-function sum(a) {
+// function sum(a) {
     
-    return function (b) {
-      if(b){
-        return sum(a+b)
-      }
-      return a
-    }
-}
+//     return function (b) {
+//       if(b){
+//         return sum(a+b)
+//       }
+//       return a
+//     }
+// }
 
 // console.log(sum(6)(5)(3)(6)(5)(3)(6)(5)(3)(6)(5)(3)());
-console.log(sum(6)(5)(3)(6)(5)(3)(6)(5)(3)(6)(5)(3));
+// console.log(sum(6)(5)(3)(6)(5)(3)(6)(5)(3)(6)(5)(3));
+
+
+
+
 
 
 
