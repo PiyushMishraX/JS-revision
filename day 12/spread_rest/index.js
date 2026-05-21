@@ -61,15 +61,15 @@
 
 
 
-let obj = {
-    id: 1,
-    name: "Hello"
-}
+// let obj = {
+//     id: 1,
+//     name: "Hello"
+// }
 
-// let {d,h} = obj
-// console.log(d, h); //wrong
+// // let {d,h} = obj
+// // console.log(d, h); //wrong
 
-// value accoring to key names
-let {name, id} = obj
-console.log(name , id);
+// // value accoring to key names
+// let {name, id} = obj
+// console.log(name , id);
 
