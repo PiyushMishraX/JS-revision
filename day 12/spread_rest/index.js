@@ -51,13 +51,25 @@
 
 //  ------------- DESTRUCTURING -----------
 
-let arr = [1,2,3,4,5,6]
-let [a, b, c] = arr // value according to positions
-console.log(a);
-a =23;
-console.log(a); // a is seperate from arr[index]
-console.log(arr[0]);
+// let arr = [1,2,3,4,5,6]
+// let [a, b, c] = arr // value according to positions
+// console.log(a);
+// a =23;
+// console.log(a); // a is seperate from arr[index]
+// console.log(arr[0]);
 
 
 
+
+let obj = {
+    id: 1,
+    name: "Hello"
+}
+
+// let {d,h} = obj
+// console.log(d, h); //wrong
+
+// value accoring to key names
+let {name, id} = obj
+console.log(name , id);
 
